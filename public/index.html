@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TikTok</title>
+<link rel="stylesheet" href="/style.css?v=8200">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#000000">
+</head>
+<body>
+
+<button id="exitFullscreenBtn" class="exit-fullscreen-btn" type="button">×</button>
+<div id="videoCounter" class="video-counter">0 / 0</div>
+
+<button id="offlineToggle" class="offline-btn">
+  Online
+</button>
+
+<div id="app">
+  <div id="feed" class="feed">
+    <div class="loading">Loading videos...</div>
+  </div>
+</div>
+
+<div id="offlinePanel" class="offline-panel">
+  <div class="offline-box">
+
+    <div class="offline-head">
+      <button id="closeOffline" class="back-btn">← Beranda</button>
+      <h2>Offline Download</h2>
+    </div>
+
+    <p class="offline-desc">
+      Download video ke IndexedDB perangkat.
+    </p>
+
+    <div class="offline-stats">
+      <div>
+        <span>Video Offline</span>
+        <strong id="offlineCount">0</strong>
+      </div>
+
+      <div>
+        <span>Ukuran</span>
+        <strong id="offlineSize">0 MB</strong>
+      </div>
+    </div>
+
+    <div class="download-options">
+      <button data-count="200">Download 200</button>
+      <button data-count="400">Download 400</button>
+      <button data-count="800">Download 800</button>
+      <button data-count="1000">Download 1000</button>
+    </div>
+
+    <button
+      id="deleteOffline"
+      class="delete-offline-btn"
+      type="button"
+    >
+      Hapus Semua Video Offline
+    </button>
+
+
+
+  <button
+  id="resetSiteBtn"
+  class="delete-offline-btn"
+  type="button"
+>
+  Reset Site (SW + Cache)
+</button>
+
+    <div class="progress-wrap">
+      <div id="downloadStatus">Belum mulai</div>
+      <div class="progress-bar">
+        <div id="progressFill"></div>
+      </div>
+    </div>
+
+    <div class="offline-note">
+      Cek hasilnya di F12 → Application → IndexedDB → tiktokOfflineDB.
+    </div>
+
+  </div>
+</div>
+
+<script src="/app.js?v=9200"></script>
+
+</body>
+</html>
